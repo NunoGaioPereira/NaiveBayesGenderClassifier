@@ -1,0 +1,33 @@
+body {
+	font:15px/1.5 Arial, Helvetica,sans-serif;
+	padding: 0px;
+	background-color:#f4f3f3;
+	box-sizing: border-box;
+}
+
+.header {
+	padding: 20px;
+	background-color: #1daeff;
+}
+
+.main-form form {
+	margin: 100px auto;
+	width: 200px;
+	text-align: center;
+}
+
+.main-form form .error {
+	color: red;
+	margin-bottom: -10px
+}
+
+.main-form form input {
+	margin: 20px 0;
+}
+
+.main-form form button {
+	border: none;
+	padding: 10px 15px;
+	background-color: #1daeff;
+	color: #fff;
+}

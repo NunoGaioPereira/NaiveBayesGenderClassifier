@@ -1,0 +1,30 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+
+
+<div class="header">
+    <h2 style="color:#fff;">Gender Classifier</h2>      
+    <p style="color:#fff;">Naive Bayes Model to Classify Gender</p>
+</div>
+
+
+<div class="main-form">
+<!-- Main Input For Receiving Query to our ML -->	
+      <form action="{{ url_for('predict')}}" method="POST">
+        <label>Write a name:</label>
+        	{% if error == "Empty Input" %}
+		    <p class="error">Please input a name</p>
+		    {% endif%}
+  			<input type="text" name="namequery">
+  			<button type="submit">Predict</button>
+			</form>
+<!-- Main Input For Receiving Query to our ML --> 
+</div>
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='styles.css')}}">
+
+
+{% endblock %}
