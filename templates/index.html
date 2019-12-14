@@ -13,6 +13,17 @@
       <form action="{{ url_for('predict')}}" method="POST">
         <label>Write a name:</label>
         	{% if error == "Empty Input" %}
+          ''' 
+          if request.method == "POST":
+           ID = request.form['ID']
+                 if not ID=="":
+                     #do stuff
+
+          name = request.form.get('name', None)
+            if name is None:
+
+
+          '''
 		    <p class="error">Please input a name</p>
 		    {% endif%}
   			<input type="text" name="namequery">

@@ -8,26 +8,10 @@ from sklearn.naive_bayes import MultinomialNB
 
 df = pd.read_csv('../data/names_dataset.csv')
 
-# Explore the data
-print(df.head())
-print(df.size)
-print(df.columns)
-
-# Checking for Missing Values
-print(df.isnull().isnull().sum())
-
-# Number of Female Names
-df[df.sex == 'F'].size
-
-# Number of Male Names
-df[df.sex == 'M'].size
-
 df_names = df
 
 # Replacing All F and M with 0 and 1 respectively
 df_names.sex.replace({'F':0,'M':1},inplace=True)
-
-df_names.sex.unique()
 
 Xfeatures = df_names['name']
 
